@@ -24,5 +24,13 @@ describe("login", () => {
             createdAt: expect.any(String), // valor dinâmico (pode ser qualquer string)
             role: USER_ROLES.NORMAL
         })
+        expect(response).toContainEqual({
+            id: "id-mock",
+            name: "Admin Mock",
+            email: "admin@email.com",
+            password: "hash-bananinha",
+            createdAt: expect.any(String), // valor dinâmico (pode ser qualquer string)
+            role: USER_ROLES.ADMIN
+        })
     })
 })
